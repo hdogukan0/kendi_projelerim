@@ -1,4 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Ara dizin (x64\Debug\) başka bir projeden (sayi_yazdirma_cesitleri.vcxproj) paylaşılan dosyalar içeriyor. Bu, hatalı temizleme ve yeniden oluşturma davranışına neden olabilir.
-  ram_ayirma.cpp
-C:\Users\doguk\Desktop\Denme\Project1\sayi_yazdirma_cesitleri\ram_ayirma.cpp(10,12): warning C4101: 'sayi': yerel değişken başvurusu kaldırıldı
-  sayi_yazdirma_cesitleri.vcxproj -> C:\Users\doguk\Desktop\Denme\Project1\x64\Debug\ram_bellekte_yer_ayirtma.exe
