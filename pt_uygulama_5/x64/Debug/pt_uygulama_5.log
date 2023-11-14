@@ -1,0 +1,3 @@
+﻿  uygulama_5.cpp
+C:\Users\doguk\Desktop\Denme\Project1\pt_uygulama_5\uygulama_5.cpp(28,19): warning C4244: '=': 'double' - 'int' dönüşümü; veri kaybı olabilir
+  pt_uygulama_5.vcxproj -> C:\Users\doguk\Desktop\Denme\Project1\x64\Debug\pt_uygulama_5.exe
