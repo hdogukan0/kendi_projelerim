@@ -1,0 +1,52 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+       /* mesaj("Bir isim giriniz");
+        String deneme = input.next();
+        mesaj("Bir sayi giriniz");
+        int a = input.nextInt();
+        System.out.println("Name = " +deneme +" numara = " +a);*//*
+        mesaj("---------------------------------------");
+        mesaj("kenar uzunlugu giriniz");
+        int kenar = input.nextInt();
+        int kare = kenar *4;
+        System.out.println("cevresi = " +kare);
+        mesaj("---------------------------------------");
+        mesaj("Birinci kenar uzunlugunu giriniz");
+        int k1 = input.nextInt();
+        mesaj("Ikinci Kenar Uzunlugunu");
+        int k2 = input.nextInt();
+        int ort = (k1+k2)*2;
+        System.out.println("cevresi = " +ort);
+        mesaj("---------------------------------------");
+        int mesafe, hiz, zaman;
+        mesaj("Hizinizi giriniz");
+        hiz = input.nextInt();
+        mesaj("Zaman saat cinsinden");
+        zaman = input.nextInt();
+        mesafe = hiz * zaman;
+        System.out.println("Mesafe = " +mesafe);*/
+        mesaj("---------------------------------------");
+        String ad, soyad;
+        mesaj("Adinizi Giriniz");
+        ad = input.next();
+        mesaj("Soyadinizi Giriniz");
+        soyad = input.next();
+        mesaj("Yasinizi Giriniz");
+        int yas = input.nextInt();
+        
+        mesaj(ad +" "+soyad);
+        System.out.println("Yasiniz = " +yas);
+        
+    }
+    
+    public static void mesaj(String message)
+    { 
+        System.out.println(message);
+    }
+    
+    
+}
