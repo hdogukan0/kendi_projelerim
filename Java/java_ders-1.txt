@@ -40,7 +40,7 @@ class HelloWorld {
         
         mesaj(ad +" "+soyad);
         System.out.println("Yasiniz = " +yas);*/
-        mesaj("---------------------------------------"); 
+        /*mesaj("---------------------------------------"); 
         int vize, fnal, quiz;
         mesaj("Vize notunu Gir");
         vize = input.nextInt();
@@ -51,7 +51,33 @@ class HelloWorld {
         
         int ort1 = (vize * 30/100) + (fnal * 60/100) + (quiz * 10/100);
         mesaj("Ortalama notunuz");
-        System.out.println(ort1);
+        System.out.println(ort1); 
+        
+        mesaj("Please Enter Pass");
+        int pass = input.nextInt();
+
+        if(pass == 12345) {
+            
+            mesaj("Login");
+        }
+        else{
+            mesaj("Uncorrect");
+        }
+        */
+        
+        int yas;
+        mesaj("Yasiniz Kac");
+        yas = input.nextInt();
+        
+        if(yas >= 18)
+        {
+            mesaj("Ehliyet alabilir");
+        }
+        else
+        {
+            mesaj("Ehliyet alamazsiniz");
+        }
+        
     }
     
     public static void mesaj(String message)
