@@ -28,7 +28,7 @@ class HelloWorld {
         mesaj("Zaman saat cinsinden");
         zaman = input.nextInt();
         mesafe = hiz * zaman;
-        System.out.println("Mesafe = " +mesafe);*/
+        System.out.println("Mesafe = " +mesafe);
         mesaj("---------------------------------------");
         String ad, soyad;
         mesaj("Adinizi Giriniz");
@@ -39,8 +39,19 @@ class HelloWorld {
         int yas = input.nextInt();
         
         mesaj(ad +" "+soyad);
-        System.out.println("Yasiniz = " +yas);
+        System.out.println("Yasiniz = " +yas);*/
+        mesaj("---------------------------------------"); 
+        int vize, fnal, quiz;
+        mesaj("Vize notunu Gir");
+        vize = input.nextInt();
+        mesaj("Final notunu Gir");
+        fnal = input.nextInt();
+        mesaj("Quiz notunu Gir");
+        quiz = input.nextInt();
         
+        int ort1 = (vize * 30/100) + (fnal * 60/100) + (quiz * 10/100);
+        mesaj("Ortalama notunuz");
+        System.out.println(ort1);
     }
     
     public static void mesaj(String message)
