@@ -1,9 +1,13 @@
-package deneme;
+package ders2020;
+
 import java.util.Scanner;
 
 public class bankamatik {
 	static Scanner input = new Scanner(System.in);
-	static int bakiye = 100;
+	static int bakiye = 1000;
+	static double kredi;
+	static double ayliktaksit;
+	static int taksit;
 	public static void main(String[] args)
 	{
 		String adSoyad = adSoyadAl();
@@ -22,7 +26,7 @@ public class bankamatik {
 			
 			yonlendir();
 			
-		}while(secenek != 3);
+		}while(secenek != 5);
 		
 	}
 	
@@ -33,20 +37,20 @@ public class bankamatik {
 	
 	public static String adSoyadAl()
 	{
-		String ad, soyad;
-		mesaj("Merhaba, İlerlemek için Lütfen Adınızı ve Soyadınızı Giriniz.\n");
+		String ad, pass;
+		mesaj("Merhaba, İlerlemek için Lütfen Adınızı ve Şifrenizi Giriniz.\n");
 		mesaj("Adınızı giriniz");
 		ad = input.next();
-		mesaj("Soyadınız Giriniz");
-		soyad = input.next();
+		mesaj("Şifrenizi Giriniz");
+		pass = input.next();
 		
-		return ad +" " +soyad;
+		return ad +" ";
 		
 	}
 	
 	public static void menu()
 	{
-		mesaj("Menü ;\n1) Para Yatırma\n2) Para Çekme\n3) Çıkış");
+		mesaj("Menü ;\n1) Para Yatırma\n2) Para Çekme\n3) Kredi\n4) Borç Ödeme\n5) Çıkış");
 	}
 	
 	public static int secenekAl()
@@ -69,6 +73,14 @@ public class bankamatik {
 			bakiye = cekme();
 		}
 		else if(x == 3)
+		{
+			kredi();
+		}
+		else if(x == 4)
+		{
+			borc();
+		}
+		else if(x == 5)
 		{
 			mesaj("Çıkış İşlemi Başarılı\n");
 		}
@@ -106,10 +118,42 @@ public class bankamatik {
 		mesaj("***********************************************************");
 		return bakiye;
 	}
+	public static void kredi()
+	{
+		mesaj("Kredi Miktarını Giriniz");
+		kredi = input.nextDouble();
+		
+		mesaj("Taksit Sayısını Giriniz");
+		taksit = input.nextInt();
+		
+		double faizOran = 3.5;
+		ayliktaksit = (kredi * faizOran * taksit)/100;
+		mesaj("Faiz Farkı " +ayliktaksit +" TL");
+		mesaj("Toplam Odeme " +(kredi+ayliktaksit) +" TL");
+	}
+	
+	public static void borc()
+	{
+		
+		mesaj("Toplam Borç " +(kredi+ayliktaksit) +" TL");
+		mesaj("Aylık Ödeme " +((kredi+ayliktaksit)/taksit));
+		mesaj("Miktar Giriniz");
+		int odeme = input.nextInt();
+		if(odeme <= bakiye)
+		{
+			mesaj("Ödeme İşlemi Başarılı");
+			bakiye -= odeme;
+			
+		}
+		else {
+			mesaj("Yetersiz Bakiye");
+		}
+		
+	}
 	
 	public static void yonlendir()
 	{
 		mesaj("\nMenüye Yönlendiriliyorsunuz... \n");
 	}
-   
+
 }
